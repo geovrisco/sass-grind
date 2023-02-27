@@ -1,0 +1,58 @@
+.btn {
+  &:link,
+  &:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    border-radius: 100px;
+    transform: all 2s;
+    display: inline-block;
+    transition: all 0.2s;
+    position: relative;
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba($color-black, 0.2);
+    &::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
+  }
+
+  &:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba($color-black, 0.2);
+  }
+
+  &-white {
+    color: $color-grey-dark;
+    background-color: $color-white;
+    &::after {
+      background-color: #fff;
+    }
+  }
+
+  &::after {
+    content: "";
+    display: inline-block; /* since we are styling the inline element  */
+    height: 100%; /* this inherited from parent component */
+    width: 100%;
+    border-radius: 100px;
+    /*
+      we want to this effect behind the parent components so we use
+      position absolute then and relative reference to the parent element
+    */
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    transition: all 0.5s;
+  }
+
+  /* create class for animatiom*/
+  &-animated {
+    animation: moveInBottom 0.5s ease-out 0.75s;
+    animation-fill-mode: backwards;
+  }
+}
