@@ -3,8 +3,8 @@
   &:visited {
     text-transform: uppercase;
     text-decoration: none;
-    padding: 15px 40px;
-    border-radius: 100px;
+    padding: 1.5rem 4rem;
+    border-radius: 10rem;
     transform: all 2s;
     display: inline-block;
     transition: all 0.2s;
@@ -12,8 +12,8 @@
   }
 
   &:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba($color-black, 0.2);
+    transform: translateY(-0.3rem);
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
     &::after {
       transform: scaleX(1.4) scaleY(1.6);
       opacity: 0;
@@ -21,8 +21,8 @@
   }
 
   &:active {
-    transform: translateY(-1px);
-    box-shadow: 0 5px 10px rgba($color-black, 0.2);
+    transform: translateY(-0.1rem);
+    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
   }
 
   &--white {
@@ -38,7 +38,7 @@
     display: inline-block; /* since we are styling the inline element  */
     height: 100%; /* this inherited from parent component */
     width: 100%;
-    border-radius: 100px;
+    border-radius: 10rem;
     /*
       we want to this effect behind the parent components so we use
       position absolute then and relative reference to the parent element
