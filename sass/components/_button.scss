@@ -25,7 +25,7 @@
     box-shadow: 0 5px 10px rgba($color-black, 0.2);
   }
 
-  &-white {
+  &--white {
     color: $color-grey-dark;
     background-color: $color-white;
     &::after {
@@ -51,7 +51,7 @@
   }
 
   /* create class for animatiom*/
-  &-animated {
+  &--animated {
     animation: moveInBottom 0.5s ease-out 0.75s;
     animation-fill-mode: backwards;
   }

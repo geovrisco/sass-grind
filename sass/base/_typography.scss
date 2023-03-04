@@ -5,7 +5,7 @@
   backface-visibility: hidden;
   margin-bottom: 60px;
 
-  &-main {
+  &--main {
     display: block;
     font-size: 60px;
     font-weight: 400;
@@ -15,7 +15,7 @@
     animation-duration: 1s;
     animation-timing-function: ease-out;
   }
-  &-sub {
+  &--sub {
     display: block;
     font-size: 20px;
     font-weight: 700;
