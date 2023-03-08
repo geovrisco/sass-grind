@@ -1,0 +1,50 @@
+.card {
+  perspective: 150rem; // put perspective on parent components (animation in child)
+  -moz-perspective: 150rem;
+  position: relative;
+  height: 50rem; //need to define the height because positiob absolute,so the parents lost height
+
+  &__side {
+    color: #fff;
+    font-size: 2rem;
+
+    height: 50rem;
+    transition: all 0.8s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    backface-visibility: hidden;
+    border-radius: 3px;
+    box-shadow: $box-shadow-regular &--front {
+      background-color: $color-white;
+    }
+
+    &--front {
+      background-color: $color-white;
+      color: black;
+    }
+
+    &--back {
+      background-color: greenyellow;
+      transform: rotateY(180deg);
+
+      &-1 {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-secondary-light,
+          $color-secondary-dark
+        );
+      }
+    }
+  }
+
+  // when card hovered front side will be transformed
+  &:hover &__side--front {
+    transform: rotateY(180deg);
+  }
+
+  &:hover &__side--back {
+    transform: rotateY(0);
+  }
+}
