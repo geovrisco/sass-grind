@@ -13,3 +13,5 @@ tools: easings.net, cubic-bezier.com
 ```
 transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
 ```
+
+s
